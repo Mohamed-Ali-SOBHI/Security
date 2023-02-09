@@ -64,6 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
       }
     }
+    // Create the users table if it doesn't already exist
+    mysqli_query($db, "CREATE TABLE IF NOT EXISTS users (identifier VARCHAR(100) PRIMARY KEY NOT NULL, password VARCHAR(100) NOT NULL)");
     // Check if the user already exists in the database
     $query = "SELECT * FROM users WHERE identifier = '$identifier'";
     $result = mysqli_query($db, $query);
