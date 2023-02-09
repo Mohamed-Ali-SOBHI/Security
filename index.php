@@ -7,7 +7,7 @@
 </head>
 <body>
   <div id="logo">
-    <img src="logo.png" alt="logo">
+    <img src="./logo.png" alt="logo">
   </div>
   <form action="form.php" method="post">
     <label for="identifier">Identifier:</label>
